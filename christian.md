@@ -1,1 +1,2 @@
 Christian Benítez
+Vinicio Chávez
