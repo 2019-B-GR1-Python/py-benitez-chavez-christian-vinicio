@@ -65,11 +65,24 @@ hoja_artistas.conditional_format(rango_celdas, formato_artistas)
 writer.save()
 
 
+
+
+
+
+
+
 path_grafico = 'C://Users//user//Documents//GitHub//py-benitez-chavez-christian-vinicio//clase 16 - Output data//mi_df_colores.xlsx'
 workbook = xlsxwriter.Workbook(path_grafico)
+worksheet = workbook.add_worksheet()
+worksheet.write_column('B2', num_artistas)
+
 chart = workbook.add_chart({'type': 'line'})
+
+
+
+
 chart.add_series({
-    'values': '=Artistas!$B$2:$B$84',
+    'values': '=Sheet1!$B$2:$B$85',
     'marker': {
         'type': 'square',
         'size': 8,
@@ -78,7 +91,9 @@ chart.add_series({
     },
 })
 
-writer.save()
+
+worksheet.insert_chart('D1', chart)
+workbook.close()
 
 
 
@@ -86,6 +101,15 @@ writer.save()
 
 
 
+
+workbook = xlsxwriter.Workbook(path_grafico)
+worksheet = workbook.add_worksheet()
+
+
+
+
+
+'''
 workbook = xlsxwriter.Workbook(path_colores)
 worksheet = workbook.add_worksheet()
 
@@ -103,6 +127,9 @@ chart.add_series({'values': rango_celdas})
 worksheet.insert_chart('E1', chart)
 
 workbook.close()
+
+'''
+
 
 
 

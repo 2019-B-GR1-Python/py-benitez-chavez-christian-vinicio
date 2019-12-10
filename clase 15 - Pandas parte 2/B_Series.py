@@ -175,16 +175,24 @@ ciudades_uno.where(ciudades_uno > 1000, ciudades_uno * 1.05)
 
 
 
+###################################
+#Prueba para examen
+###################################
+
+mylist = list('abcedfghijklmnopqrstuvwxyz')
+myarr = np.arange(26)
+mydict = dict(zip(mylist, myarr))
+
+
+serie_a = pd.Series(mylist)
 
 
 
 
+ser = pd.Series(np.take(list('abcdefgh'), np.random.randint(8, size=30)))
+
+def5 = pd.DataFrame(ser)
+def6 = pd.DataFrame(ser, columns=['Letras'])
 
 
-
-
-
-
-
-
-
+veces_repetidas = def6.groupby('Index').count()['Letras']

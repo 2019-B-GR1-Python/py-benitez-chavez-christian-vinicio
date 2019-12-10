@@ -35,5 +35,28 @@ datos_fisicos_uno = pd.DataFrame(arr_pand, columns=['Estatura (cm)', 'Peso (gr)'
 datos_fisicos_dos = pd.DataFrame(arr_pand, columns=['Estatura (cm)', 'Peso (gr)', 'Edad (anios)'], index=['Christian', 'Benitez'])
 #Renombrar indices 
 def1.index=['Maria','Jose']
-#Renombrar columnas
+    #Renombrar columnas
 def1.columns = ['A','B','C','D','E','F','G']
+
+
+
+
+
+
+
+##########################
+mylist = list('abcedfghijklmnopqrstuvwxyz')
+myarr = np.arange(26)
+mydict = dict(zip(mylist, myarr))
+ser = pd.Series(mydict) 
+
+df1 = pd.DataFrame(ser)
+datos_indices = pd.DataFrame(ser, index=[myarr])
+
+# Transformar la serie en dataframe y hacer una columna indice
+ser1 = pd.Series(list('abcedfghijklmnopqrstuvwxyz'))
+ser2 = pd.Series(np.arange(26))
+nuevo_df = def1 = pd.DataFrame(ser1)
+nuevo_df[1] = ser2
+
+
