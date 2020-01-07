@@ -134,9 +134,16 @@ workbook.close()
 
 
 
+with sqlite3.connect("bdd_artist.db") as conexion:
+    df5.to_sql('py_artistas1', conexion)
+
+
+# with mysql.connect('mysql://user:password@')
 
 
 
-
+##Exportar a JSON
+## Muestre tipo tabla
+df5.to_json('artistas_tabla.json', orient='table')
 
 
