@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrapy</title>
+    <style>
+        #titulo-uno{
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            font-size: 50pt;
+            font-style: italic;
+        }
+
+        body{
+            background-color: orange;
+        }
+
+       
+
+        .fondo-verde{
+            background-color: green;
+        }
+
+        p{
+            color: white;
+            background-color: black;
+            font-size: 24pt;
+            padding: 10px;
+            margin: 5px;
+            font-style: italic;
+        }
+
+        .texto-amarillo{
+            color: yellow;
+        }
+
+        .texto-azul{
+            color: blue;
+        }
+
+        .texto-cafe{
+            color: brown;
+        }
+
+        /*Etiquetas dentro de etiquetas*/
+        body > ul > li > p{
+            background-color: coral;
+            color: darkgrey;
+        }
+
+        li > p.texto-amarillo{
+            color: goldenrod;
+        }
+
+        p.texto-azul.texto-amarillo.texto-cafe.texto-blanco{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1 id='titulo-uno' class="texto-amarillo">Título</h1>
+    <p class="texto-amarillo">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quidem alias nemo! Esse illo quae facilis sed delectus, officiis quia earum odio dolor alias, fuga quos consequatur tenetur totam recusandae.
+    </p>
+
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error autem dolorem molestiae voluptatem quas nihil! Reprehenderit quasi quidem rerum libero quisquam, alias, dignissimos officia deleniti nihil unde corrupti consectetur ipsam.
+    </p>
+    <p class="fondo-verde" id="titulo-uno">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit pariatur porro, blanditiis officiis corrupti aliquam odio, deleniti optio nostrum aliquid saepe illum. Ea quidem vitae explicabo similique pariatur nam.
+    </p>
+
+    <p class=" texto-cafe texto-azul texto-amarillo texto-blanco ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laudantium nihil architecto nesciunt dicta veritatis, deserunt numquam omnis harum doloremque quia ipsum, iure vitae provident eius inventore exercitationem, hic voluptas!
+    </p>
+
+    <ul>
+        <li>
+            <p>MUY</p>
+        </li>
+        <li>
+            <p>BUENOS</p>
+        </li>
+        <li>
+            <p class="texto-amarillo">DIAS</p>
+        </li>
+            
+        
+    </ul>
+
+    <style>
+        .texto-blanco{
+            color: white;
+        }
+    </style>
+
+</body>
+</html>
