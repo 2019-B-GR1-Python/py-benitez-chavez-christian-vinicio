@@ -29,14 +29,14 @@ a que existe servidores que redireccionan.
 $ scrapy view https://www.pluralsight.com/authors#
 ```
 
-## scrapy shell `url`.`
+## scrapy shell `url`.
 Interactuar con la respuesta del scrapy
 
-````
+```
 $ scrapy shell http://quotes.toscrape.com/tag/love/
 ```
 
-````
+```
 $ response.css('title')
 $ response.css('title').extract
 $ response.css('title::text').extract
@@ -55,5 +55,12 @@ $ response.xpath('html/head/title').extract()
 $ response.xpath('//title').extract()
 $ response.xpath("//div[@class='quote']/span[@class='text']").extract_first()
 $ response.xpath("//div[@class='quote']/span[@class='text']/text()").extract_first()
+$ response.xpath("//div[@class='quote']/span/a/@href").extract_first()
+$ response.xpath("//div[@class='quote']/span/a/text()").extract_first()
+```
 
+## Scrapy startproject `nombre_proyecto`
+
+```
+$ scrapy startproject arania_basica
 ```
